@@ -111,7 +111,7 @@ nav {
 
 
 .link:hover{
-    color: var(--accent-color);
+   color: var(--primary-text-color);
 }
 
 
@@ -126,14 +126,14 @@ nav {
     letter-spacing: 0.02em;
     text-decoration: none;
     align-items: center;
-    color: var(--accent-color);
-    /*color: var(--primary-text-color);*/
+    color: var(--primary-text-color);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
 
 .link-header:hover,
-.link-header:focus{
+.link-header:focus {
+    
     color: var(--accent-color);
     opacity: 1; 
    
@@ -767,7 +767,7 @@ nav {
     position: absolute;
     top:50%;
     left:50%;
-    transform:translate(-50%,-50%) scale(1);
+    transform: translate(-50%,-50%) scale(1);
     width: 528px;
     height: 580px;
     background-color: #FFFFFF;
@@ -833,25 +833,28 @@ nav {
     border: 0px;
     border-radius: 4px;
     cursor: pointer; 
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1)
+    color: var(--primary-text-color);
+    /*box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);*/
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms cubic-bezier(0.4, 0, 0.2, 1);
      
 }
 .button-all:hover, 
 .button-all:focus { 
     background-color: var(--accent-color);
     color:#F5F4FA;
-    /*box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);*/
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /*list-advantage(переваги список(сервиса))*/
 
 .list-advantage {
+    
     display: flex;
     flex-wrap: wrap;  
 }
 
 .list-item-filter {
+    position: relative;
    display: inline-block;
    width: 370px; 
    margin-right: 30px;
@@ -860,16 +863,19 @@ nav {
    
 } 
 .link-filter {
-    
     display: inline-block;
     text-decoration: none;
+    /*transform: translateY(100%);
+    transition: transform 500ms linear;*/
+
 }  
 .link-filter:hover,
 .link-filter:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     
-    
 }
+    
+
 
 .list-item-filter:nth-child(3n) {
     margin-right: 0px;
@@ -945,21 +951,54 @@ nav {
     align-items: center;
     color: #FFFFFF;
     background-color: #2196F3;
-    
+    animation-name: none;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear; 
     /*opacity: 0;*/
     transform: translateY(100%);
-    transition: transform 500ms linear;
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
     
 } 
 
+/*.resource:hover,
+.resource:focus {
+    transform: translateY(0%);
 
-.overlay-link:hover .resource,
+
+}*/
+/*.overlay-link:hover .resource,
 .overlay-link:focus .resource { 
-    /*opacity: 1;*/
+    /*opacity: 1;
     transform: translateY(0%);
     
     
+}*/
+
+.link-filter:hover .resource,
+.link-filter:focus .resource {
+     transform: translateY(0%);
 }
+
+/*.link-filter:hover .overlay-link,
+.link-filter:focus .overlay-link {
+    
+    transform: translateY(0%);
+}*/
+
+
+
+
+/*.list-item-filter:hover .resource,
+.list-item-filter:focus .resource{
+    transform: translateY(0%);
+}*/
+        
+
+
+
+
 
 
 /* Final part(финальная часть портфолио)*/
