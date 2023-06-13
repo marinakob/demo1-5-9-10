@@ -835,7 +835,7 @@ nav {
     cursor: pointer; 
     color: var(--primary-text-color);
     /*box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);*/
-    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    /*transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);*/
      
 }
 .button-all:hover, 
@@ -843,7 +843,9 @@ nav {
     background-color: var(--accent-color);
     color:#F5F4FA;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1), color 500ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 /*list-advantage(переваги список(сервиса))*/
 
@@ -865,14 +867,14 @@ nav {
 .link-filter {
     display: inline-block;
     text-decoration: none;
-    /*transform: translateY(100%);
-    transition: transform 500ms linear;*/
 
-}  
+} 
+
+
 .link-filter:hover,
 .link-filter:focus {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    
+    transition: box-shadow 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
     
 
@@ -958,16 +960,11 @@ nav {
     animation-timing-function: linear; 
     /*opacity: 0;*/
     transform: translateY(100%);
-    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 } 
 
-/*.resource:hover,
-.resource:focus {
-    transform: translateY(0%);
 
-
-}*/
 /*.overlay-link:hover .resource,
 .overlay-link:focus .resource { 
     /*opacity: 1;
